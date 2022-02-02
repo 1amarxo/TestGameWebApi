@@ -19,7 +19,10 @@ namespace Presentation.Controllers
             this.genreService = genreService;
         }
 
-
+        /// <summary>
+        ///   Add genre 
+        /// </summary>
+        /// <returns></returns>
         [HttpPost("add-genre")]
         public IActionResult AddGame([FromBody] GenreVM genre)
         {
@@ -27,6 +30,12 @@ namespace Presentation.Controllers
             return Ok();
         }
 
+
+
+        /// <summary>
+        ///   Get genre with Games by ID
+        /// </summary>
+        /// <returns></returns>
         [HttpGet("get-genre-whith-games-by-id/{id}")]
         public IActionResult GetGenreWithGames(int id)
         {
@@ -34,6 +43,21 @@ namespace Presentation.Controllers
             return Ok(genre);
         }
 
+
+        /// <summary>
+        ///   Get genre with Games by NAME
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet("get-genre-whith-games-by-name/{name}")]
+        public IActionResult GetGenreWithGames(string name)
+        {
+            var genre = genreService.GetGenreWithGames(name);
+            return Ok(genre);
+        }
+        /// <summary>
+        ///   Get all genre
+        /// </summary>
+        /// <returns></returns>
         [HttpGet("get-all-genres")]
         public IActionResult GetAll()
         {

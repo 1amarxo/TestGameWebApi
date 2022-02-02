@@ -44,5 +44,19 @@ namespace Presentation.Services
         {
             return context.Genres.ToList();
         }
+
+        public List<GenreWithGamesVM> GetGenreWithGames(string name)
+        {
+
+            var genre = context.Genres.Where(g => g.Name == name).Select(g => new GenreWithGamesVM()
+            {
+                Name = g.Name,
+                GameNames = g.Game_Genres.Select(g => g.Game.Name).ToList()
+            }).ToList();
+
+
+            return genre;
+
+        }
     }
 }
