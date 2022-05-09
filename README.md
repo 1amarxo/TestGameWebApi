@@ -1,3 +1,20 @@
-WebApi Test
+## Table of contents
+* [General info](#general-info)
+* [Technologies](#technologies)
+* [Setup](#setup)
 
-Выполнил UI через Swagger так как в задании не указано использовать Angular
+## General info
+This project is WebApi powered by SwaggerUI and .NET EntityFramework .
+	
+## Technologies
+Project is created with:
+* SwaggerUI as a controller.
+* EntityFramework with "CodeFirst" approach.
+	
+## Setup
+To run this project, install it locally using npm:
+
+```
+$ npm install
+$ npm start
+```
