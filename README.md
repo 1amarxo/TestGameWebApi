@@ -13,9 +13,9 @@ Project is created with:
 * Many-to-many relationship between tables for categories "Game" and "Type"
 	
 ## Setup
-To run this project, install it locally using npm:
-
+To run backend, install it locally using console in VisualStudio:
 ```
 Add-Migration "NAME"
 Update-Database "NAME"
 ```
+
